@@ -15,4 +15,6 @@ app.get('', (req, res) => {
     });
 });
 
+app.use('/users', require('./src/routes/user.routes'));
+
 module.exports = app;
