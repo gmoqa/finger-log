@@ -1,0 +1,26 @@
+{
+  "name": "finger-log",
+  "version": "1.0.0",
+  "description": "API REST for register customer fingerprints and log custom transactions.",
+  "main": "app.js",
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmoqa/finger-log.git"
+  },
+  "keywords": [
+    "fingerprint",
+    "nodejs",
+    "javascript",
+    "api",
+    "rest"
+  ],
+  "author": "Guillermo Quinteros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmoqa/finger-log/issues"
+  },
+  "homepage": "https://github.com/gmoqa/finger-log#readme"
+}
