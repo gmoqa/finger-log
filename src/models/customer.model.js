@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
     name : { type: String },
     lastName : { type: String },
+    rut: { type: String },
+    fingerprint : { type: Text },
     email : { type: String, lowercase: true },
-    role : {type: String },
-    created: { type: Date, default: Date.now },
-    lastLogin: { type: Date, default: Date.now }
+    created: { type: Date, default: Date.now }
 });
 
-const User = mongoose.model('User', schema);
+const Customer = mongoose.model('Customer', schema);
 
-module.exports = User;
+module.exports = Customer;
