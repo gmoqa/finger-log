@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    created: { type: Date, default: Date.now }
+    customer : { type: Schema.Types.ObjectId, ref: 'Customer' },
+    createdAt: { type: Date, default: Date.now }
 });
 
 const Transaction = mongoose.model('Transaction', schema);

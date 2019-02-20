@@ -5,8 +5,9 @@ const schema = new Schema({
     name : { type: String },
     lastName : { type: String },
     email : { type: String, lowercase: true },
+    password : { type: String },
     role : {type: String },
-    created: { type: Date, default: Date.now },
+    createdAt: { type: Date, default: Date.now },
     lastLogin: { type: Date, default: Date.now }
 });
 

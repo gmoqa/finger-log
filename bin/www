@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /*
- * (MIT) This file is part of the fingerlog
+ * This file is part of Fingerlog API
+ * MIT License (MIT)
+ * @author <gu.quinteros@gmail.com>
  */
 'use strict';
 const app = require('../app');

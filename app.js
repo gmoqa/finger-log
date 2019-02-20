@@ -1,7 +1,15 @@
+/*
+ * This file is part of Fingerlog API
+ * MIT License (MIT)
+ * @author <gu.quinteros@gmail.com>
+ */
+require('dotenv').config();
 const express =  require('express');
+const sequelize = require('sequelize');
 const parser = require('body-parser');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const db = require('./src/mongo');
 
 const app = express();
 
@@ -15,6 +23,11 @@ app.get('', (req, res) => {
     });
 });
 
-app.use('/users', require('./src/routes/customer.routes'));
+app.use('/customers', require('./src/routes/customer.routes'));
 
-module.exports = app;
+module.exports = async () => {
+    const app = express();
+    await sequelize.sync();
+    app.use(parser.json());
+    return app;
+};
